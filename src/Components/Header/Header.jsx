@@ -29,6 +29,7 @@ const Header = () => {
   return (
     <>
       <div className={`mx-auto flex justify-between items-center p-6 z-50 ${isMenuOpen ? 'bg-white' : 'bg-[#F8F7F4]'}`}>
+        {/* <div className={`mx-auto flex justify-between items-center p-6 z-50 bg-white`}> */}
         <div className="flex items-center">
           <button onClick={toggleMenu} className="lg:hidden mt-3 mr-4">
             {isMenuOpen ? (

@@ -1,6 +1,8 @@
 import { Navigate, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import CardsListing from "../pages/CardsListing";
+import GoPro from "../pages/GoPro";
+import Inspiration from "../pages/Inspiration";
+import Jobs from "../pages/Jobs";
 
 
 
@@ -11,7 +13,9 @@ const Routers = () => {
       <Route path="/" element={<Navigate to="/home" />} />
       <Route index element={<Home />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/cards" element={<CardsListing />} />
+      <Route path="/shots/popular" element={<Inspiration />} />
+      <Route path="/jobs" element={<Jobs />} />
+      <Route path="pro" element={<GoPro />} />
     </Routes>
   );
 };

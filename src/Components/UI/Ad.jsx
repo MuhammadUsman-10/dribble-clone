@@ -1,6 +1,6 @@
 const Ad = () => {
     return (
-        <div className="w-full h-auto min-h-screen flex flex-col items-center justify-center bg-[#ffda79] py-10 sm:py-20">
+        <div className="w-full h-full flex flex-col items-center justify-center bg-[#ffda79] py-10 sm:py-20">
             <h1 className="mb-5 mx-[30px] md:mx-20 lg:mx-48 xl:mx-[450px] mt-10 text-center text-[40px] md:text-[60px] lg:text-[60px] font-semibold">
                 Find your next designer today
             </h1>

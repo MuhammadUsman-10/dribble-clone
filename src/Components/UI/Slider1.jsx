@@ -33,7 +33,7 @@ const CardSlider1 = () => {
     ];
 
     useEffect(() => {
-        cardService.getCardsMini().then((data) => setCards(data.slice(0, 6)));
+        cardService.getCardsMax().then((data) => setCards(data.slice(0, 12)));
     }, []);
 
     const CardTemplate = (card) => {

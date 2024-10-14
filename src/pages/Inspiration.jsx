@@ -10,7 +10,7 @@ const Inspiration = () => {
                     Discover the world&apos;s top designers & creatives
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl font-serif">
-                    Dribbble is the leading destination to find & showcase creative work and home to the world&apos;s best design professionals.
+                    Dribbble is the leading destination to find & shodwcase creative work and home to the world&apos;s best design professionals.
                 </p>
                 <div className="relative w-full max-w-2xl mb-8">
                 <i className="px-6 fas fa-search absolute top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />

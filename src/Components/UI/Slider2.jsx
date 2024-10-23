@@ -1,10 +1,23 @@
 import {useState, useEffect} from "react";
-import {Card} from "../assets/cards2.js";
+import {Skeleton} from 'primereact/skeleton';
+// import {Card} from "../assets/cards2.js";
 import { Carousel } from 'primereact/carousel';
+import axios from 'axios';
 
 const CardSlider2 = () => {
     const [cards, setCards] = useState([]);
+    const [loading, setLoading] = useState(true);
     const responsiveOptions = [
+        {
+            breakpoint: '2560px',
+            numVisible: 6,
+            numScroll: 1
+        },
+        {
+            breakpoint: '2000px',
+            numVisible: 5,
+            numScroll: 1
+        },
         {
             breakpoint: '1440px',
             numVisible: 4,
@@ -38,7 +51,18 @@ const CardSlider2 = () => {
     ];
 
     useEffect(() => {
-        Card.getCardsMax().then((data) => setCards(data.slice(0, 12)));
+        const fetchcardData = async () => {
+            try {
+                const response = await axios.get('https://dummyjson.com/c/bb7d-b98c-42ad-8daf'); // Adjust the endpoint as necessary
+                setCards(response.data);
+                console.log('Card data:', response.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching car data:', error);
+            }
+        };
+
+        fetchcardData(); // Call the fetch function on component mount
     }, []);
 
     const CardTemplate = (card) => {
@@ -60,10 +84,42 @@ const CardSlider2 = () => {
             </div>
         );
     };
+
+    const LoadingTemplate = () => {
+        const skeletonData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        const skeletonCardTemplate = () => (
+            <div className="animate-pulse max-w-xs mx-auto rounded-lg">
+                <div className="relative bg-gray-800 rounded-lg overflow-hidden object-cover m-3 ">
+                    <Skeleton width="100%" height="220px" className="bg-slate-700" />
+                </div>
+                <div className="flex items-center pt-4 bg-transparent mt-0 pl-6 p-1">
+                    <Skeleton shape="circle" size="2rem" className="bg-slate-400" />
+                    <Skeleton width="60%" height="1.5rem" className="ml-2 bg-slate-400 rounded-md" />
+                </div>
+            </div>
+        );
+        return (
+            <div className="card bg-[#F8F7F4]">
+                <Carousel value={skeletonData} numVisible={3} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
+                    autoplayInterval={2000} itemTemplate={skeletonCardTemplate} />
+            </div>
+        );
+    };
+
+
     return (
-        <div className="card my-20">
-            <Carousel value={cards} numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
-            autoplayInterval={3000} itemTemplate={CardTemplate} />
+        <div>
+            {loading ? (
+                <div className="card my-20">
+                    <LoadingTemplate />
+                </div>
+            ):(
+                <div className="card my-20">
+                    <Carousel value={cards} numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
+                    autoplayInterval={3000} itemTemplate={CardTemplate} />
+                </div>
+            )}
         </div>
     )
 }

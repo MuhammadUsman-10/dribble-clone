@@ -10,7 +10,7 @@ const CardSlider1 = () => {
     const responsiveOptions = [
         {
             breakpoint: '2560px',
-            numVisible: 6,
+            numVisible: 5,
             numScroll: 1
         },
         {

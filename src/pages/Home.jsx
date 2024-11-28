@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Ad from "../Components/UI/Ad";
 import Hero from "../Components/UI/Hero";

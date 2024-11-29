@@ -10,7 +10,6 @@ const navLinks = [
 ];
 
 const Header = () => {
-    const [loggedIn, setLoggedIn] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [user] = usePersistedUserState("userInfo", null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -27,9 +26,6 @@ const Header = () => {
         window.location.reload();
     };
     useEffect(() => {
-        if(user?.username) {
-            setLoggedIn(true);
-        }
         if (isMenuOpen) {
         document.body.style.overflow = 'hidden'; // Disable scrolling
         } else {

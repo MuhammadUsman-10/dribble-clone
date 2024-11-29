@@ -4,7 +4,7 @@ import usePersistedUserState from '../UI/persistedHook';
 
 const ProtectedRoutes = ({children}) => {
     const [user] = usePersistedUserState("userInfo", null);
-    if (!user.accessToken) {
+    if (!user?.accessToken) {
         return <Navigate to="/login" />
     }
     return children;

@@ -8,9 +8,6 @@ import Register from "../pages/Register";
 import UserProfile from "../pages/UserProfile";
 import ProtectedRoutes from "../Components/UI/ProtectedRoutes";
 
-
-
-
 const Routers = () => {
   return (
     <Routes>

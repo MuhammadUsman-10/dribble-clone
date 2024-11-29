@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+
 const Card = ({ cardData }) => {
     const { image_url, brand,title, type, likes, views } = cardData;
     return (

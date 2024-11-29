@@ -6,6 +6,7 @@ const Register = () => {
     const handleEmail = () => {
         setIsEmail(!isEmail);
     }
+    
     return (
         <div className="flex w-full h-auto bg-white">
             <div className="hidden md:inline-block w-1/2 object-cover overflow-hidden">

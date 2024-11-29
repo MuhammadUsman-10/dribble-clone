@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import CardItem2 from "./CardItem2";
 import CardItem from "./CardItem";
 import cardData from "../assets/cards3";
+
 const CardDetails = () => {
     // const {image, brand, title} = item;
     return (

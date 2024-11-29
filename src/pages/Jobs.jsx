@@ -102,73 +102,72 @@ const Jobs = () => {
                                 ))
                         }
                     </div>
-                        <div className="w-1/3 hidden md:inline-block">
-                            <div className="md:w-full lg:w-full xl:w-4/5 max-w-4xl mx-auto p-10 border rounded-xl shadow-sm">
-                                <div className="mb-8">
-                                    <h2 className="text-xl font-semibold mb-2">Specialties</h2>
-                                    <div className="space-y-2 w-full">
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Animation</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Brand / Graphic Design</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Illustration</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Leadership</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Mobile Design</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">UI/Visual Design</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Product Design</span>
-                                        </label>
-                                        <label className="flex items-center mb-2">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">UX Design / Research</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md  hover:ring-4 hover:ring-pink-100 transition" />
-                                            <span className="md:text-xs lg:text-lg ml-3">Web Design</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <hr className="my-5" />
-                                <div className="mb-6">
-                                    <h2 className="text-xl font-semibold mb-2">Location</h2>
-                                    <input type="text" placeholder="Enter Location..." className="w-full px-2 py-4 outline outline-1 outline-slate-200 hover:ring-4 hover:ring-pink-100 transition rounded-2xl mb-2" />
-                                    <label className="flex items-center">
+                    <div className="w-1/3 hidden md:inline-block">
+                        <div className="md:w-full lg:w-full xl:w-4/5 max-w-4xl mx-auto p-10 border rounded-xl shadow-sm">
+                            <div className="mb-8">
+                                <h2 className="text-xl font-semibold mb-2">Specialties</h2>
+                                <div className="space-y-2 w-full">
+                                    <label className="flex items-center mb-2">
                                         <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                        <span className="md:text-xs lg:text-lg ml-3">Open to remote</span>
+                                        <span className="md:text-xs lg:text-lg ml-3">Animation</span>
                                     </label>
-                                </div>
-                                <hr className="my-5" />
-                                <div className="mb-8">
-                                <label className="flex items-center mb-2">
+                                    <label className="flex items-center mb-2">
                                         <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                        <span className="md:text-xs lg:text-lg ml-3">Full-Time</span>
+                                        <span className="md:text-xs lg:text-lg ml-3">Brand / Graphic Design</span>
+                                    </label>
+                                    <label className="flex items-center mb-2">
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">Illustration</span>
+                                    </label>
+                                    <label className="flex items-center mb-2">
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">Leadership</span>
+                                    </label>
+                                    <label className="flex items-center mb-2">
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">Mobile Design</span>
+                                    </label>
+                                    <label className="flex items-center mb-2">
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">UI/Visual Design</span>
+                                    </label>
+                                    <label className="flex items-center mb-2">
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">Product Design</span>
+                                    </label>
+                                    <label className="flex items-center mb-2">
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">UX Design / Research</span>
                                     </label>
                                     <label className="flex items-center">
-                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
-                                        <span className="md:text-xs lg:text-lg ml-3">Freelance/Contract</span>
+                                        <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md  hover:ring-4 hover:ring-pink-100 transition" />
+                                        <span className="md:text-xs lg:text-lg ml-3">Web Design</span>
                                     </label>
                                 </div>
-                                <button className="w-full py-2 rounded-full bg-gray-400 text-white rounded-m">Filter</button>
                             </div>
+                            <hr className="my-5" />
+                            <div className="mb-6">
+                                <h2 className="text-xl font-semibold mb-2">Location</h2>
+                                <input type="text" placeholder="Enter Location..." className="w-full px-2 py-4 outline outline-1 outline-slate-200 hover:ring-4 hover:ring-pink-100 transition rounded-2xl mb-2" />
+                                <label className="flex items-center">
+                                    <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                    <span className="md:text-xs lg:text-lg ml-3">Open to remote</span>
+                                </label>
+                            </div>
+                            <hr className="my-5" />
+                            <div className="mb-8">
+                                <label className="flex items-center mb-2">
+                                    <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                    <span className="md:text-xs lg:text-lg ml-3">Full-Time</span>
+                                </label>
+                                <label className="flex items-center">
+                                    <input type="checkbox" className="appearance-none h-5 w-5 border border-gray-300 rounded-md hover:ring-4 hover:ring-pink-100 transition" />
+                                    <span className="md:text-xs lg:text-lg ml-3">Freelance/Contract</span>
+                                </label>
+                            </div>
+                            <button className="w-full py-2 rounded-full bg-gray-400 text-white rounded-m">Filter</button>
                         </div>
-
+                    </div>
                 </div> 
             </div>
         </div>

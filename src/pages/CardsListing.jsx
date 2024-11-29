@@ -15,7 +15,7 @@ const CardsListing = () => {
             try {
                 const response = await axios.get('https://dummyjson.com/c/8a4f-2dbe-46bc-a18e'); // Adjust the endpoint as necessary
                 setCardData(response.data);
-                console.log('Card data:', response.data);
+                // console.log('Card data:', response.data);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching car data:', error);

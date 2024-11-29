@@ -42,105 +42,77 @@ const Header = () => {
         <div className={`${isMenuOpen ? 'bg-white' : 'bg-[#F8F7F4]'}`}>
             <div className={`container mx-auto flex justify-between items-center p-6 z-50`}>
                 {/* <div className={`mx-auto flex justify-between items-center p-6 z-50 bg-white`}> */}
-                {user ? (
-                <>
-                    <div className="flex items-center">
-                        <button onClick={toggleMenu} className="lg:hidden mt-3 mr-4">
-                            {isMenuOpen ? (
-                                <i className="fas fa-times text-2xl"></i> // Close icon when menu is open
-                            ) : (
-                                <i className="fas fa-bars text-2xl"></i> // Bars icon when menu is closed
-                            )}
-                        </button>
-                        <Link to="/home">
-                            <img
-                                src="https://logos-world.net/wp-content/uploads/2023/09/Dribbble-Logo.png"
-                                className="w-[80px] h-[40px] sm:w-[105px] sm:h-[55px] text-md font-semibold text-black hover:text-slate-700"
-                                alt="Logo"
-                            />
+                <div className="flex items-center">
+                    <button onClick={toggleMenu} className="lg:hidden mt-3 mr-4">
+                        {isMenuOpen ? (
+                            <i className="fas fa-times text-2xl"></i> // Close icon when menu is open
+                        ) : (
+                            <i className="fas fa-bars text-2xl"></i> // Bars icon when menu is closed
+                        )}
+                    </button>
+                    <Link to="/home">
+                        <img
+                            src="https://logos-world.net/wp-content/uploads/2023/09/Dribbble-Logo.png"
+                            className="w-[80px] h-[40px] sm:w-[105px] sm:h-[55px] text-md font-semibold text-black hover:text-slate-700"
+                            alt="Logo"
+                        />
+                    </Link>
+                </div>
+                <div className="hidden lg:flex space-x-8">
+                    {navLinks.map((item, index) => (
+                        <Link to={item.path} className="text-base font-semibold text-black hover:text-slate-700" key={index} >
+                        {item.display}
                         </Link>
+                    ))}
+                </div>
+                {user ? (
+                <div className="flex items-center space-x-4">
+                    <div className="relative">
+                        <i className="fas fa-search rounded-full px-3 py-2 border-4 border-transparent hover:border-pink-100 lg:bg-white transition">
+                        <input
+                            className="hidden lg:inline-block p-2 pl-3 focus:outline-none font-light w-[150px] lg:w-[200px]"
+                            placeholder="Search..."
+                        />
+                        </i>
                     </div>
-                    <div className="hidden lg:flex space-x-8">
-                        {navLinks.map((item, index) => (
-                            <Link to={item.path} className="text-base font-semibold text-black hover:text-slate-700" key={index} >
-                            {item.display}
-                            </Link>
-                        ))}
+                    <div className="relative flex px-3 py-2 rounded-lg border items-center">
+                        <span className="cursor-pointer" onClick={toggleDropdown} >
+                        Hi, {user.firstName}
+                        </span>
+                        <button className="px-2 transition " onClick={toggleDropdown}> {/*Click to open dropdown*/}
+                            {dropdownOpen ? (
+                                <>
+                                    <i className="fas fa-angle-up"></i>
+                                    <div className="w-44 absolute top-10 right-0 mt-3 z-10 border rounded-lg">
+                                        <div className="flex flex-col w-full px-5 py-1 bg-[#F8F7F4]">
+                                            <Link to="/userprofile" className="">User Profile</Link>
+                                            <Link className="px-4" onClick={handleLogout}>Logout</Link>
+                                        </div>
+                                    </div>
+                                </>
+                            ) : (
+                                <i className="fas fa-angle-down"></i>
+                            )}                  
+                        </button>
                     </div>
-                    {/* {user ? ( */}
+                </div>
+                ) : (
                     <div className="flex items-center space-x-4">
                         <div className="relative">
                             <i className="fas fa-search rounded-full px-3 py-2 border-4 border-transparent hover:border-pink-100 lg:bg-white transition">
-                            <input
-                                className="hidden lg:inline-block p-2 pl-3 focus:outline-none font-light w-[150px] lg:w-[200px]"
-                                placeholder="Search..."
-                            />
+                                <input
+                                    className="hidden lg:inline-block p-2 pl-3 focus:outline-none font-light w-[150px] lg:w-[200px]"
+                                    placeholder="Search..."
+                                />
                             </i>
                         </div>
-                        <div className="relative flex px-3 py-2 rounded-lg border items-center">
-                            <span className="cursor-pointer" onClick={toggleDropdown} >
-                            Hi, {user.firstName}
-                            </span>
-                            <button className="px-2 transition " onClick={toggleDropdown}> {/*Click to open dropdown*/}
-                                {dropdownOpen ? (
-                                    <>
-                                        <i className="fas fa-angle-up"></i>
-                                        <div className="w-44 absolute top-10 right-0 mt-3 z-10 border rounded-lg">
-                                            <div className="flex flex-col w-full px-5 py-1 bg-[#F8F7F4]">
-                                                <Link to="/userprofile" className="">User Profile</Link>
-                                                <Link className="px-4" onClick={handleLogout}>Logout</Link>
-                                            </div>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <i className="fas fa-angle-down"></i>
-                                )}                  
-                            </button>
-                        </div>
+                        <Link to="/login" className="hidden lg:inline-block pr-3 text-base font-semibold">
+                            Log in
+                        </Link>
+                        <Link to="/register" className="bg-black py-3 px-5 text-xs text-white rounded-full font-semibold hover:bg-slate-700 transition duration-300 sm:py-3 sm:px-5 sm:text-base">
+                            Sign Up
+                        </Link>
                     </div>
-                </>
-                ) : (
-                    <>
-                        <div className="flex items-center">
-                            <button onClick={toggleMenu} className="lg:hidden mt-3 mr-4">
-                                {isMenuOpen ? (
-                                    <i className="fas fa-times text-2xl"></i> // Close icon when menu is open
-                                ) : (
-                                    <i className="fas fa-bars text-2xl"></i> // Bars icon when menu is closed
-                                )}
-                            </button>
-                            <Link to="/home">
-                                <img
-                                    src="https://logos-world.net/wp-content/uploads/2023/09/Dribbble-Logo.png"
-                                    className="w-[80px] h-[40px] sm:w-[105px] sm:h-[55px] text-md font-semibold text-black hover:text-slate-700"
-                                    alt="Logo"
-                                />
-                            </Link>
-                        </div>
-                        <div className="hidden lg:flex space-x-8">
-                            {navLinks.map((item, index) => (
-                                <Link to={item.path} className="text-base font-semibold text-black hover:text-slate-700" key={index} >
-                                {item.display}
-                                </Link>
-                            ))}
-                        </div>
-                        <div className="flex items-center space-x-4">
-                            <div className="relative">
-                                <i className="fas fa-search rounded-full px-3 py-2 border-4 border-transparent hover:border-pink-100 lg:bg-white transition">
-                                    <input
-                                        className="hidden lg:inline-block p-2 pl-3 focus:outline-none font-light w-[150px] lg:w-[200px]"
-                                        placeholder="Search..."
-                                    />
-                                </i>
-                            </div>
-                            <Link to="/login" className="hidden lg:inline-block pr-3 text-base font-semibold">
-                                Log in
-                            </Link>
-                            <Link to="/register" className="bg-black py-3 px-5 text-xs text-white rounded-full font-semibold hover:bg-slate-700 transition duration-300 sm:py-3 sm:px-5 sm:text-base">
-                                Sign Up
-                            </Link>
-                        </div>
-                    </>
                 )}
             </div>
             <div className={`lg:hidden fixed top-[113px] left-0 w-full h-auto bg-white shadow-lg z-40 transform ${

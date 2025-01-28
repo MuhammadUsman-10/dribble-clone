@@ -117,7 +117,7 @@ const GoPro = () => {
                 </div>
 
                 {/* 2nd Div */}
-                <div className='container mx-auto p-5 items-center'>
+                <div className='container mx-auto my-6 p-5 items-center'>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                     {cards.map((cards) => (
                         <Pro key={cards.id} item={cards}>
@@ -127,7 +127,7 @@ const GoPro = () => {
                 </div>
 
                 {/*3rd Div*/}
-                <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl">
+                <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl my-10">
                     <div className="relative w-full h-auto lg:w-2/3 mb-5 lg:mb-0 px-2 lg:px-0">
                         <img src="https://framerusercontent.com/images/JprMi3z3GyPIWtw3KgpO8qrTGGs.png?scale-down-to=1024" 
                             alt="Hand holding a smartphone displaying a product"
@@ -151,7 +151,7 @@ const GoPro = () => {
                 </div>
             
                 {/* 4th  section */}
-                <div className="flex flex-col-reverse lg:flex-row items-center lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl">
+                <div className="flex flex-col-reverse lg:flex-row items-center lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl my-10">
                     <div className="w-full lg:w-1/3">
                         <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">
                         Convert leads, deliver work, and get paid through Dribbble <br/>(for free).
@@ -207,7 +207,7 @@ const GoPro = () => {
                 </div>
 
                 {/* 5th  section */}
-                <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl">
+                <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl my-10">
                     <div className="relative w-full h-auto lg:w-2/3">
                         <img
                             src="https://framerusercontent.com/images/5EzsY6x0jjfOC9lwKAIQfHeObk.png?scale-down-to=1024"
@@ -226,7 +226,7 @@ const GoPro = () => {
                 </div>
 
                 {/* 6th  section */}
-                <div className="flex flex-col lg:flex-row lg:justify-between items-center space-y-8 lg:space-y-0 lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl">
+                <div className="flex flex-col lg:flex-row lg:justify-between items-center space-y-8 lg:space-y-0 lg:gap-16 p-4 py-10 lg:px-20 max-w-screen-2xl my-10">
                     <div className="w-full lg:w-1/2">
                         <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">
                         12 Months of Webflow <br/>Included
@@ -250,7 +250,7 @@ const GoPro = () => {
                 
 
                 {/* 7th  section */}
-                <div className='container mx-auto p-5 items-center'>
+                <div className='container mx-auto p-5 items-center my-10'>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                     {testimonials.map((testimonials) => (
                         <Testimonial key={testimonials.id} item={testimonials} />
@@ -260,7 +260,7 @@ const GoPro = () => {
                 </div>
 
                 {/* 8th Div */ }
-                <div className="flex flex-col items-center mx-auto p-5 my-10 ">
+                <div className="flex flex-col items-center mx-auto my-10 p-5">
                     <div className="text-center mb-8">
                         <h1 className="mx-2 md:mx-12 xl:mx-60 text-2xl lg:text-4xl font-bold text-gray-900">The most design-forward companies on the planet hire designers from Dribbble.</h1>
                         <p className="text-lg text-gray-600 mt-4">Our community partners with some of the most valuable companies on the planet.</p>
@@ -342,7 +342,7 @@ const GoPro = () => {
                 </div>
             </div>
             {/* 9th Div */ }
-            <div className="h-auto text-center p-6 bg-gradient-to-r from-[#EBFAF6] to-[#E5FCE1] mt-10 b-30">
+            <div className="h-auto text-center p-6 bg-gradient-to-r from-[#EBFAF6] to-[#E5FCE1]  b-30">
                 <div className='mt-8 mb-16'>
                     <h1 className="text-[45px] lg: font-serif">Level up your career with Pro</h1>
                 </div>

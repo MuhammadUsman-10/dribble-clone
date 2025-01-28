@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import CardItem2 from "./CardItem2";
 import CardItem from "./CardItem";
 import cardData from "../assets/cards3";
+
 const CardDetails = () => {
     // const {image, brand, title} = item;
     return (
@@ -22,14 +23,12 @@ const CardDetails = () => {
                                 <span className="ml-2">Muhammad Usman</span>
                                 <div className="ml-2 flex flex-row gap-2 justify-between items-center">
                                     <h2 className="text-green-500 text-sm cursor-pointer">Available for work</h2>
-                                    {/* Hide Follow button on small screens */}
                                     <button className="text-slate-500 text-sm hover:text-slate-900 hidden sm:inline-block">
                                         Follow
                                     </button>
                                 </div>
                             </div>
                         </div>
-    {/* For larger screens, show the "Get in Touch" button. For mobile, show the envelope icon */}
                         <div className="flex gap-2 items-center">
                             <i className="far fa-heart rounded-full p-3 border border-1"></i>
                             <i className="far fa-bookmark rounded-full px-[14px] py-3 border"></i>

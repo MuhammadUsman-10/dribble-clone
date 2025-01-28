@@ -4,8 +4,8 @@ const Inspiration = () => {
     const trendingSearches = ["landing page", "ios", "food", "landingpage", "uxdesign", "app design"]
 
     return (
-        <>
-            <div className="flex flex-col items-center justify-center px-4 py-12 bg-white text-center mb-30">
+        <div className="bg-[#F8F7F4]">
+            <div className="flex flex-col items-center justify-center px-4 py-12 text-center mb-30">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  text-gray-900 mb-4 max-w-4xl font-serif">
                     Discover the world&apos;s top designers & creatives
                 </h1>
@@ -31,7 +31,7 @@ const Inspiration = () => {
                 </div>
             </div>
             <CardsListing />
-        </>
+        </div>
     )
 }
 
